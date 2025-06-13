@@ -40,3 +40,23 @@ This project aims to enable real-time acoustic event detection while ensuring us
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 cd YOUR_REPO_NAME
+```
+
+#### 2. Install Frontend Dependencies
+```bash
+cd frontend
+npm install
+```
+
+#### 3. Start the Development Server
+```bash
+npm run dev
+```
+
+#### 4. (Optional) Run Python Scripts
+```bash
+cd scripts
+python preprocess_audio.py
+```
+
+### ✨ Happy Coding from Team TechTonic! 🚀
