@@ -131,7 +131,7 @@ npm start
 - **Deployment**: Static site on Render
 
 ### Model Details
-- **Architecture**: Convolutional Neural Network
+- **Architecture**: Used transfer learning by using imagenet model
 - **Input**: MFCC features (40 x 216 x 1)
 - **Output**: Multi-class classification with confidence scores
 - **Format**: TensorFlow native (.keras/.pkl) for version compatibility
