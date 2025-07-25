@@ -216,5 +216,4 @@ This project is developed for **AISOC 2025** educational purposes and follows ac
 
 ### ✨ Happy Coding from Team TechTonic! 🚀
 
-**Built with ❤️ by Team TechTonic for AISOC 2025**
 
