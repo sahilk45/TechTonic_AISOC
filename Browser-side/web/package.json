@@ -1,0 +1,15 @@
+{
+  "name": "privacy-first-audio-classifier",
+  "version": "2.0.0",
+  "description": "Enhanced privacy-first audio classification using advanced CNN-RNN hybrid ONNX model",
+  "main": "index.html",
+  "dependencies": {
+    "onnxruntime-web": "^1.17.0"
+  },
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8080"
+  },
+  "keywords": ["privacy", "audio", "classification", "machine-learning", "onnx"],
+  "privacy": "client-side-only"
+}
