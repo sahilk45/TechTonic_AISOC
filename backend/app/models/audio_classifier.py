@@ -21,7 +21,6 @@ class AudioClassifier:
             # Load .keras or .pkl file
             if self.model_path.endswith('.pkl') or self.model_path.endswith('.keras'):
                 if self.model_path.endswith('.keras'):
-                    # Load TensorFlow native format
                     try:
                         import tensorflow as tf
                         print(f"Loading model from: {self.model_path}")
@@ -33,7 +32,6 @@ class AudioClassifier:
                         raise RuntimeError(f"Failed to load .keras model: {keras_error}")
                         
                 elif self.model_path.endswith('.pkl'):
-                    # Original pickle loading code...
                     try:
                         print(f"Loading model from: {self.model_path}")
                         with open(self.model_path, 'rb') as f:
@@ -208,7 +206,7 @@ class AudioClassifier:
                     'subcategory_confidence': subcategory_confidence
                 })
             
-            # SMART ALERT SYSTEM - Based on your AISOC project requirements
+            # SMART ALERT SYSTEM
             alert_triggered = self._check_alert_conditions(
                 predicted_category, 
                 predicted_subcategory, 
@@ -248,7 +246,6 @@ class AudioClassifier:
         Smart alert system based on AISOC project specifications.
         Triggers alerts for dangerous/important events with >70% confidence.
         """
-        # Define alert-worthy events from your AISOC project
         ALERT_EVENTS = {
             # Emergency sounds
             'alarm': {'priority': 'high', 'type': 'emergency'},
@@ -294,7 +291,7 @@ class AudioClassifier:
         }
         
         # Alert logic: >70% confidence for alert-worthy events
-        if primary_confidence > 0.70:  # 70% threshold from your requirements
+        if primary_confidence > 0.70:  
             event_key = None
             
             # Find matching alert event (exact match or partial match)

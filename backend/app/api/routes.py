@@ -10,8 +10,8 @@ from app.utils.audio_processing import AudioProcessor
 
 router = APIRouter()
 
-# Updated paths to use the .pkl file
-MODEL_PATH = "models/model1.keras"  # Changed from audio_processing.h5
+# Updated paths to use the model file
+MODEL_PATH = "models/model1.keras"  
 METADATA_PATH = "models/metadata.npy"
 
 try:
@@ -23,7 +23,7 @@ except Exception as e:
     classifier = None
     processor = None
 
-# Rest of your routes.py code remains the same...
+# Predict endpoint
 @router.post("/predict")
 async def predict_audio(file: UploadFile = File(...)):
     """Predict audio class with live chunk support."""
@@ -127,7 +127,7 @@ async def predict_audio(file: UploadFile = File(...)):
         # For live chunks, return graceful error response
         if is_live_chunk:
             return JSONResponse(
-                status_code=200,  # Don't return 500 for live chunks
+                status_code=200,  
                 content={
                     'predicted_category': 'error',
                     'confidence': 0.0,

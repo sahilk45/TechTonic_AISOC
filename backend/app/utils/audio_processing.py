@@ -46,7 +46,7 @@ class AudioProcessor:
                 hop_length=self.hop_length
             )
             
-            # Normalize MFCCs (matching teammate's normalization)
+            # Normalize MFCCs (used by sakshm)
             mfccs = (mfccs - np.mean(mfccs)) / np.std(mfccs)
             
             print(f"MFCC shape: {mfccs.shape}")

@@ -63,7 +63,7 @@ const LiveRecording = ({ onPrediction }) => {
       cancelAnimationFrame(animationFrameRef.current);
     }
   };
-}, []); // Empty dependency array is fine with this approach
+}, []); 
 
 
   const requestMicrophonePermission = async () => {
@@ -271,8 +271,6 @@ const processAudioChunk = async (audioBlob, chunkIndex) => {
 
   } catch (err) {
     console.error(`Error processing chunk ${chunkIndex}:`, err);
-    // Don't show error to user for individual chunk failures
-    // Live recording should continue despite occasional chunk errors
   }
 };
 

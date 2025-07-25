@@ -23,9 +23,7 @@ app.add_middleware(GZipMiddleware, minimum_size=1000)
 # CORRECTED CORS configuration
 origins = [
     "http://localhost:3000",  # Local development
-    "http://localhost:5173",  # Vite development
-    "https://event-detection-frontened.onrender.com",  # Exact frontend URL (no trailing slash)
-    # Add other specific Render URLs as needed
+    "https://event-detection-frontened.onrender.com",  # Exact frontend URL after deploying on render 
 ]
 
 app.add_middleware(

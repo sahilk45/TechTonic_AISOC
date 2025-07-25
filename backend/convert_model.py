@@ -2,7 +2,6 @@ import pickle
 import tensorflow as tf
 import os
 
-# Make sure models directory exists
 os.makedirs('models', exist_ok=True)
 
 print("Loading pickle model...")

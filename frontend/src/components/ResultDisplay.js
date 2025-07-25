@@ -31,7 +31,6 @@ import {
 } from '@mui/icons-material';
 
 const ResultDisplay = ({ result, error }) => {
-  // Move useEffect to the top
   React.useEffect(() => {
     if (result?.alert_info?.should_alert && result.alert_info.priority !== 'low') {
       if (Notification.permission === 'default') {
